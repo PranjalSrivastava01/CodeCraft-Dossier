@@ -4,8 +4,7 @@ class Solution {
   public:
     int shortestDistance(int N, int M, vector<vector<int>> a, int X, int Y) {
         // code here
-        
-        if(a[0][0]==0)return 0;
+        if(a[0][0]==0) return 0;
         queue<pair<pair<int,int>,int>> q;
         vector<vector<int>> vis(N,vector<int>(M,0));
         q.push({{0,0},0});
@@ -26,7 +25,8 @@ class Solution {
             int nRow = row+ Row[i];
             int nCol = col + Col[i];
             
-            if(nRow>=0 && nRow < N && nCol>=0 && nCol <M && a[nRow][nCol] == 1 && vis[nRow][nCol] == 0){
+            if(nRow>=0 && nRow < N && nCol>=0 && nCol <M && a[nRow][nCol] == 1 && vis[nRow][nCol] == 0)
+            {
                 vis[nRow][nCol] = 1;
                 q.push({{nRow,nCol},dist+1});
             }
