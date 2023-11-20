@@ -17,7 +17,8 @@ class Solution {
     int lr=myFun(root->right);
     if(lh==-1 || lr==-1) return -1;
     if(abs(lh-lr)>1) return -1;
-    return max(lh,lr)+1;}
+    return max(lh,lr)+1;
+    }
 public:
     bool isBalanced(TreeNode* root) {
         int k=myFun(root);
